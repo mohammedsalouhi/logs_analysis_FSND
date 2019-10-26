@@ -70,7 +70,7 @@ AS
          INNER JOIN bad_response AS b 
                  ON a.day = b.day; 
   ```
-3. Now exit the database by typing `\q` then ENTER, and run the `logs_analysis.py`, you should have the same results as in the `output.txt`.
+3. Now exit the database by typing `\q` then ENTER, and run the `python logs_analysis.py`, you should have the same results as in the `output.txt`.
   
 
 
