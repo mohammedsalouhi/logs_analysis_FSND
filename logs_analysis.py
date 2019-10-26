@@ -78,7 +78,11 @@ def print_error_report(query, question):
     
 if __name__ == "__main__":
 
-    print_reports(top_articles_query, what_top_articles)
-    print_reports(top_authors_query, what_top_authors)
-    print_error_report(days_error_over_one, what_days_error)
+    try:
+        print_reports(top_articles_query, what_top_articles)
+        print_reports(top_authors_query, what_top_authors)
+        print_error_report(days_error_over_one, what_days_error)
+		
+    except psycopg2.OperationalError:
+        print("\ncan't connect to the database, make sure the database exists.\n")
     
