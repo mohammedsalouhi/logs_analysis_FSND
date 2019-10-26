@@ -36,8 +36,8 @@ what_days_error = "\nDays on which more than 1 % of requests lead to errors:\n"
 
 days_error_over_one = '''
 SELECT day, 
-Round(percent, 2) AS PERCENT 
-FROM   error_percent 
+Round(percent, 2) AS percent 
+FROM   error_percentage 
 WHERE  percent > 1; '''
 
 

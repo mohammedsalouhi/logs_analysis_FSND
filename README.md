@@ -62,12 +62,12 @@ AS
   GROUP  BY day; 
   ```
   ```SQL
-CREATE VIEW error_percent 
-AS 
-  SELECT a.day, 
-         ( b.error * 100.0 / a.good ) AS PERCENT 
-  FROM   good_response AS a 
-         INNER JOIN bad_response AS b 
+CREATE VIEW error_percentage
+AS
+  SELECT a.day,
+         ( b.error * 100.0 / (b.error + a.good)) AS percent
+  FROM   good_response AS a
+         INNER JOIN bad_response AS b
                  ON a.day = b.day; 
   ```
 3. Now exit the database by typing `\q` then ENTER, and run the `python logs_analysis.py`, you should have the same results as in the `output.txt`.
