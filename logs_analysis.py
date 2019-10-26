@@ -57,8 +57,8 @@ def get_reports(query):
 
 def print_reports(query,question):
     '''print a formated result of the query'''   
-    print(question)
     data = get_reports(query)
+	print(question)
     for i in range(len(data)):
         message = "\t{} -- {} views.".format(data[i][0], data[i][1])
         print(message)
@@ -68,8 +68,8 @@ def print_reports(query,question):
 
 def print_error_report(query, question):
     '''print a formated result of the query, and change date format'''
-    print(question)
     data = get_reports(query)
+	print(question)
     for i in range(len(data)):
         date_format = data[i][0].strftime('%B %d, %Y')
         message="\t{} -- {}% errors.".format(date_format, data[i][1])
