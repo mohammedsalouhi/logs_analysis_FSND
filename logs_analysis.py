@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''This program is a reporting tool that prints reports in plain text 
 based on the fetched data from the database.This is a Python program 
 that use psycopg2 modul to connect to the database'''
