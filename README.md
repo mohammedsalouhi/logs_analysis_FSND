@@ -29,8 +29,7 @@ Flollow the steps below:
 **Running**
 1. Open the terminal and make sure you are in the vagrant directory, and then run `psql -d news -f newsdata.sql` Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data.
 2. Now you are connected to the news database, so run the following SQL code, in order to add some views to your database
-Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data.
-3.Now you are connected to the news database, so run the following SQL code, to add some views to your database:
+
 ```SQL
 CREATE VIEW article_owner 
 AS 
